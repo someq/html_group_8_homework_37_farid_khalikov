@@ -1,0 +1,161 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 935px;
+    min-width: 320px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.row-flex {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.col {
+    float: left;
+    box-sizing: border-box;
+}
+
+.col-info {
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.col-map {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-top: 5%;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 4.8em;
+    color: #111111;
+}
+
+.icons {
+    margin: 5% 0;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 0;
+    border-radius: 50%;
+    text-decoration: none;
+    background-size: cover;
+}
+
+.ic-skier, .ic-lightning, .ic-backpack {
+    height: 34px;
+    width: 34px;
+    background: url('../img/icons.png') no-repeat;
+}
+
+.ic-skier {
+    background-position: center left;
+}
+
+.ic-lightning {
+    background-position: center left -41px;
+}
+
+.ic-backpack {
+    background-position: center left -82px;
+}
+
+.info {
+    font-size: 1.8em;
+    line-height: 1.6;
+    color: #444444;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: solid 2px #fa7205;
+    min-width: 220px;
+    box-sizing: border-box;
+    padding: 2% 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6em;
+    text-align: center;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.btn-simple {
+    background: #fa7205;
+    color: #ffffff;
+}
+
+.btn-drop {
+    color: #fa7205;
+}
+
+.btn-drop::after {
+    content: '';
+    display: inline-block;
+    background: url("../img/arrow.png") center/cover no-repeat;
+    width: 20px;
+    height: 11px;
+    margin-left: 5%;
+}
+
+.map, .map a, .map img {
+    display: block;
+    font-size: 0;
+    border-radius: 50%;
+}
+
+.map a {
+    text-decoration: none;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 640px) {
+    .col-info, .col-map {
+        width: 49%;
+        flex-basis: 49%;
+    }
+
+    .col-map {
+        margin-left: 2%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .col-info {
+        width: 65%;
+        flex-basis: 65%;
+    }
+
+    .col-map {
+        width: 30%;
+        flex-basis: 30%;
+        margin-left: 5%;
+    }
+
+    .btn {
+        width: auto;
+        min-width: 220px;
+        margin-right: 3%;
+    }
+
+    .btn:last-child {
+        margin-right: 0;
+    }
+}
+
