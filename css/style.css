@@ -35,17 +35,17 @@ body {
 .col-map {
     width: 100%;
     flex: 0 0 100%;
-    margin-top: 5%;
 }
 
 .title {
     font-weight: 300;
     font-size: 4.8em;
     color: #111111;
+    margin-left: 0.25%;
 }
 
 .icons {
-    margin: 5% 0;
+    margin: 3.9% 0 4%;
 }
 
 .icon {
@@ -56,10 +56,15 @@ body {
     background-size: cover;
     height: 34px;
     width: 34px;
+    margin-left: 0.85%;
 
     /* Иконки не в svg, т.к. trace криво работает
        на маленьких иконках с мелкими деталями. */
     background: url('../img/icons.png') no-repeat;
+}
+
+.icon:first-child {
+    margin-left: 0;
 }
 
 .ic-skier {
@@ -76,8 +81,10 @@ body {
 
 .info {
     font-size: 1.8em;
-    line-height: 1.6;
+    /* не совпадает с высотой из fireworks, подгнано по PP */
+    line-height: 1.65;
     color: #444444;
+    padding-left: 0.5%;
 }
 
 .btn {
@@ -86,13 +93,13 @@ body {
     border: solid 2px #fa7205;
     min-width: 220px;
     box-sizing: border-box;
-    padding: 2% 0;
+    padding: 2.2% 0;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.6em;
     text-align: center;
     width: 100%;
-    margin-top: 3%;
+    margin-top: 5.8%;
 }
 
 .btn-simple {
@@ -110,13 +117,17 @@ body {
     background: url("../img/arrow.png") center/cover no-repeat;
     width: 20px;
     height: 11px;
-    margin-left: 5%;
+    margin: 0 -3% 0 3.5%;
 }
 
 .map, .map a, .map img {
     display: block;
     font-size: 0;
     border-radius: 50%;
+}
+
+.map {
+    margin-top: 9.5%;
 }
 
 .map a {
@@ -134,10 +145,6 @@ body {
         flex-basis: 50%;
     }
 
-    .col-info {
-        padding-right: 2%;
-    }
-
     .col-map {
         padding-left: 2%;
     }
@@ -148,11 +155,11 @@ body {
     }
 
     .btn {
-        width: 48.5%;
+        width: 48.25%;
     }
 
     .btn:last-child {
-        margin-left: 3%;
+        margin-left: 3.5%;
     }
 }
 
@@ -160,12 +167,13 @@ body {
     .col-info {
         width: 67%;
         flex-basis: 67%;
-        padding-right: 5%;
+        padding-right: 1%;
     }
 
     .col-map {
         width: 33%;
         flex-basis: 33%;
+        padding-left: 1%;
     }
 
     .buttons {
