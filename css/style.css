@@ -17,6 +17,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+
+    /* из-за дублирования флексов флоатами
+       вместо justify-content - отступы на колонках */
 }
 
 .col {
@@ -51,11 +54,11 @@ body {
     border-radius: 50%;
     text-decoration: none;
     background-size: cover;
-}
-
-.ic-skier, .ic-lightning, .ic-backpack {
     height: 34px;
     width: 34px;
+
+    /* Иконки не в svg, т.к. trace криво работает
+       на маленьких иконках с мелкими деталями. */
     background: url('../img/icons.png') no-repeat;
 }
 
@@ -125,37 +128,53 @@ body {
     height: auto;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 560px) {
     .col-info, .col-map {
-        width: 49%;
-        flex-basis: 49%;
+        width: 50%;
+        flex-basis: 50%;
+    }
+
+    .col-info {
+        padding-right: 2%;
     }
 
     .col-map {
-        margin-left: 2%;
+        padding-left: 2%;
+    }
+
+    .buttons {
+        /* растягиваем кнопки */
+        min-width: 200%;
+    }
+
+    .btn {
+        width: 48.5%;
+    }
+
+    .btn:last-child {
+        margin-left: 3%;
     }
 }
 
 @media screen and (min-width: 800px) {
     .col-info {
-        width: 65%;
-        flex-basis: 65%;
+        width: 67%;
+        flex-basis: 67%;
+        padding-right: 5%;
     }
 
     .col-map {
-        width: 30%;
-        flex-basis: 30%;
-        margin-left: 5%;
+        width: 33%;
+        flex-basis: 33%;
+    }
+
+    .buttons {
+        min-width: 0;
     }
 
     .btn {
         width: auto;
         min-width: 220px;
-        margin-right: 3%;
-    }
-
-    .btn:last-child {
-        margin-right: 0;
     }
 }
 
